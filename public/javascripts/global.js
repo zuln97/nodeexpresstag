@@ -22,6 +22,7 @@ function populateTable() {
   // Empty content string
   var tableContent = '';
 
+
   // jQuery AJAX call for JSON
   $.getJSON( '/tags/taglist', function( data ) {
     // Stick our user data array into a taglist variable in the global object
@@ -30,10 +31,10 @@ tagListData = data;
     $.each(data, function(){
       tableContent += '<tr>';
       tableContent += '<td><a href="#" class="linkshowtag" rel="' + this._id + '">' + this._id + '</a></td>';
-      tableContent += '<td>' + this.Ant_Id + '</td>';
-      tableContent += '<td>' + this.PC + '</td>';
+      // tableContent += '<td>' + this.Ant_Id + '</td>';
+      // tableContent += '<td>' + this.PC + '</td>';
       tableContent += '<td>' + this.EPC + '</td>';
-      tableContent += '<td>' + this.Date + '</td>';
+      // tableContent += '<td>' + this.Date + '</td>';
       tableContent += '<td><a href="#" class="linkdeletetag" rel="' + this._id + '">DELETE</a></td>';
       tableContent += '</tr>';
     });
