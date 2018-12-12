@@ -10,6 +10,7 @@ var monk = require('monk');
 var db = monk('localhost:27017/rfid');
 var indexRouter = require('./routes/index');
 var tagsRouter = require('./routes/tags');
+var logsRouter = require('./routes/logs');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use(function(req,res,next){
 
 app.use('/', indexRouter);
 app.use('/tags', tagsRouter);
+app.use('/logs', logsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
