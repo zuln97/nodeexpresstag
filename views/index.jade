@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  h1= title
+  h3 Welcome to our test
+
+  // Wrapper
+  #wrapper
+
+    // TAG INFO
+    #tagInfo
+      h2 Tag Info
+      p
+        strong Id:
+        |  <span id='tagInfoId'></span>
+        br
+        strong AntennaId:
+        |  <span id='tagInfoAntennaId'></span>
+        br
+        strong PC:
+        |  <span id='tagInfoPc'></span>
+        br
+        strong EPC:
+        |  <span id='tagInfoEpc'></span>
+        br
+        strong Date:
+        |  <span id='tagInfoDate'></span>
+    // /TAG INFO
+
+    // TAG LIST
+    h2 Tag List
+    
+    #tagList
+      table
+        thead
+          th ID
+          th ANTENNA ID
+          th PC 
+          th EPC
+          th DATE
+          th DELETE?
+        tbody
+    // /TAG LIST
+
+  // /FOOTER
+  // #footer
+  //    h5 This project  
+  // /WRAPPER
+
+ 
